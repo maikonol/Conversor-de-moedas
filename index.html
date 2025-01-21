@@ -1,67 +1,71 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css"/>
     <title>Conversor de Moedas</title>
 </head>
 
+
 <body>
-    <img class="logo" src="./assets/logo.gif" alt="Conversor de Moedas">
+    <div class="caixa-video">
+        <video src="./assets/Fundo.mp4" autoplay muted loop></video>
+    </div>
+    
+    <div class="container">
 
-    <main>
-        <label>
-            Converter <b>de</b>
-            <select class="currency-options">
-                <option> R$ Real Brasileiro</option>
-                <option> US$ Dólar americano</option>   
-                <option> € Euro</option>
-                <option> £ Libra</option>
-                <option> $ Peso Agentino</option>
-            </select>
-        </label>
+        <header>
+            <h1>Conversor de Moedas</h1>
+        </header>
 
-        <label>
-            Converter <b>para</b>
-            <select class="currency-select">
-                <option value="dolar"> US$ Dólar americano</option>
-                <option value="euro"> € Euro</option>
-                <option value="libra"> £ Libra</option>
-                <option value="peso-agentino"> $ Peso Agentino</option>
-            </select>
-        </label>
+        <main>
+            <label>
+          
+                <p class="inform">Conveter</p>
+                <select>
+                    <option>R$ Real brasileiro</option>
+                </select>
+            </label>
 
-        <label>
-            Valor
-            <input class="input-currency" placeholder="R$ 10.000,00">
+            <label>
+                <p class="inform">Para</p>
+                <select id="currencry-select">
+                    <option>US$ Dólar americano</option>
+                    <option>€ Euro</option>
+                    <option>Bitcoin</option>
+                </select>
+            </label>
 
-        </label>
+            <label>
+            
+                <input id="input-real" placeholder="Insira um Valor em R$"/>
+            </label>
 
-        <button class="convert-button">Converter</button>
+            <button id="convert-button" type="button">Converter</button>
 
-        <section>
-            <div class="currency-box">
-                <img src="./assets/real.png" alt="Moeda a converter">
-                <p class="currency">Real</p>
-                <p class="currency-value-to-convert">R$ 0,00</p>
-            </div>
+            <section>
+                <div class="currency-container">
+                    <img src="./assets/brasil 2.png" alt="bandeira-brasil"/>
 
-            <img class="arrow-img" src="./assets/arrow.png" alt=seta>
+                    <p class="currency-name">Real</p>
+                    <p class="currency-value" id="real-value-text">R$ 10.000,00</p>
+                </div>
 
-            <div class="currency-box">
-                <img class="currency-img" src="./assets/dolar.png" alt="Moeda a convertida">
-                <p class="currency" id="currency-name">Dólar americano</p>
-                <p class="currency-value">U$ 0.0</p>
-            </div>
+                <img class="arrow-img" src="./assets/Vector.png" alt="seta"/>
 
-        </section>
-    </main>
+                <div class="currency-container">
+                    <img src="./assets/eua.png" id="currency-img" alt="bandeira-pais-conversao"/>
+                    <p class="currency-name" id="currency-name">Dólar Americano</p>
+                    <p class="currency-value" id="doral-value-text">US$ 2.000,00</p>
+                </div>
+            </section>
+
+        </main>
+    </div>
 </body>
-<script src="./script.js"></script>
-
+<script src="./scripts.js"></script>
 </html>
